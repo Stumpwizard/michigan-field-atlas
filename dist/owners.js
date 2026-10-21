@@ -14,7 +14,7 @@ async function query(url,params,signal){const r=await fetch(url+'/query?'+new UR
 map.on('click',async event=>{
 if(!toggle.checked||!enabled()||map.getZoom()<15)return;
 clear();const ticket=serial;request=new AbortController();const controller=request;const timeout=setTimeout(()=>controller.abort(),20000);
-popup=L.popup({maxWidth:340,maxHeight:330}).setLatLng(event.latlng).setContent('<h3>Parcel owner</h3><p>Finding county and property record…</p>').openOn(map);const currentPopup=popup;
+popup=L.popup({maxWidth:340,maxHeight:330,autoPanPaddingTopLeft:[55,90],autoPanPaddingBottomRight:[20,35]}).setLatLng(event.latlng).setContent('<h3>Parcel owner</h3><p>Finding county and property record…</p>').openOn(map);const currentPopup=popup;
 const valid=()=>ticket===serial&&popup===currentPopup&&map.hasLayer(currentPopup);
 const geometry=JSON.stringify({x:event.latlng.lng,y:event.latlng.lat,spatialReference:{wkid:4326}});
 const spatial={geometry,geometryType:'esriGeometryPoint',inSR:'4326',spatialRel:'esriSpatialRelIntersects'};
