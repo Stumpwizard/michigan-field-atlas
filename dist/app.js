@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id),base='https://services3.arcgis.com/Jdnp1
 if(!window.L||!L.esri){$('status').textContent='Map software unavailable. Check your connection and reload.';return;}
 const feature=(s,id)=>base+s+'/FeatureServer/'+id,marker=()=>null,polygon=()=>null;
 const configs=[
-{id:'county',title:'Berrien County parcel lines',note:'County road commission 2024 parcels · Berrien only',color:'#a15f49',url:'https://gis.berriencountymi.gov/server/rest/services/BCRD_GIS_Map_5202026/FeatureServer/2',minScale:80000},
+{id:'county',title:'Berrien County parcel lines',note:'County current parcel service · Berrien only',color:'#a15f49',url:'https://gis.berriencountymi.gov/server/rest/services/Hosted/Parcels_Current/FeatureServer/0',minScale:80000},
 {id:'noaa',title:'NOAA Great Lakes charts',note:'Electronic navigation charts · chart units',color:'#78afbd',kind:'map',url:'https://gis.charttools.noaa.gov/arcgis/rest/services/MCS/NOAAChartDisplay/MapServer/exts/MaritimeChartService/MapServer',opacity:.9},
 {id:'lands',title:'DNR managed public lands',note:'State-managed land · check activity rules',color:'#688658',url:feature('DNRLOTSParcelsOPENDATA',2),minScale:1500000,opacity:.45},
 {id:'forest',title:'National forest lands',note:'Federal ownership · check local restrictions',color:'#437258',url:'https://services5.arcgis.com/7weheFjxuNkGGiZi/arcgis/rest/services/USA_Federal_Lands_2025/FeatureServer/0',definitionExpression:"Agency IN ('Forest Service')",minScale:3000000,opacity:.4},

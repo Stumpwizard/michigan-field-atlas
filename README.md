@@ -13,7 +13,7 @@ Create a public repository named `michigan-field-atlas`, add these files to its 
 - Historical inland lake contours and approximate deepest points (feet).
 - NOAA chart display from the MaritimeChartService extension.
 - DNR managed land, national forest ownership, wildlife project areas and active Hunting Access Program sites.
-- DNR parcel lines and Berrien County road commission's 2024 parcel data.
+- DNR parcel lines and Berrien County's current parcel service.
 - Lake, stream and launch name search; topographic, satellite and street basemaps; browser geolocation; shareable views and layer opacity.
 
 ## Coverage and interpretation
