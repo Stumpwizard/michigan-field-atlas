@@ -13,14 +13,14 @@ Create a public repository named `michigan-field-atlas`, add these files to its 
 - Historical inland lake contours and approximate deepest points (feet).
 - NOAA chart display from the MaritimeChartService extension.
 - DNR managed land, national forest ownership, wildlife project areas and active Hunting Access Program sites.
-- DNR parcel lines and Berrien County's current parcel service.
+- Parcel outlines across all 83 Michigan counties using the public Regrid / Esri Living Atlas raster tile layer, with an 83-county selector. DNR parcel lines and Berrien County’s current parcel attributes are also available.
 - Lake, stream and launch name search; topographic, satellite and street basemaps; browser geolocation; shareable views and layer opacity.
 
 ## Coverage and interpretation
 
 This is a planning map, not a navigation chart or legal boundary survey. All layers require an internet connection. Loading errors and zoom thresholds are displayed per layer. A successful empty query does not prove absence of features. Source data may lag regulations or site conditions.
 
-Statewide private tax parcel boundaries are not public through Michigan's state open-data portal. The app includes DNR parcels and a clearly labeled Berrien County dataset, plus a link to the state's county parcel-viewer directory. Other counties are not represented as statewide private parcel coverage.
+Statewide parcel outlines use Regrid USA Nationwide Parcel Boundaries (ArcGIS item a2050b09baff493aa4ad7848ba2fac00), a public raster tile layer covering all US counties. Tiles load at zoom 15–17 and resample at zoom 18–19. No bulk parcel geometry or ownership data is downloaded or redistributed. Statewide outlines have no attribute popups. County source dates and completeness vary; recent splits and corrections may lag. Regrid/LOVELAND Technologies attribution and source/license links are displayed. The optional Berrien and DNR feature layers retain their popups. The county selector uses centers calculated from Michigan Geographic Framework county polygons, not parcel boundaries.
 
 Deep-point locations are historical deepest-contour centroids. They are approximate, not surveyed soundings. NOAA depth units follow the chart; inland DNR depths are feet. Verify current DNR regulations and posted property restrictions. Wildlife project boundaries can contain private inholdings. Public ownership does not imply unrestricted hunting or river access.
 
@@ -33,3 +33,7 @@ Source URLs are in `dist/app.js` and linked in the app. The `.openai/hosting.jso
 ## Verification
 
 JavaScript syntax checked with Node. Browser preview checks performed with Leaflet after replacing a WebGL-dependent renderer. Live source availability is external and may change.
+
+## Stable address
+
+All revisions deploy to https://stumpwizard.github.io/michigan-field-atlas/ from this repository. Preserve the repository name and Pages configuration.
