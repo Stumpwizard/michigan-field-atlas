@@ -4,3 +4,15 @@
 .parcel-tools{margin:4px 0 14px;padding:13px;background:#e9ede2;border:1px solid #c8d2bf;border-radius:8px;display:grid;gap:8px}.parcel-tools label{font-size:10px;font-weight:800;letter-spacing:1.1px;color:#315346}.parcel-tools select{width:100%;min-width:0;padding:9px;border:1px solid #b6c2ae;border-radius:5px;background:#fff;color:#173e36;font:inherit}.parcel-tools button{padding:9px;background:#173e36;color:#fff;border:0;border-radius:5px;font-weight:700}.parcel-tools small{font-size:11px;line-height:1.5;color:#526655}
 
 .parcel-tools .owner-toggle{display:flex;align-items:center;gap:7px;letter-spacing:0;font-size:12px;text-transform:none}.owner-toggle input{accent-color:#173e36}.parcel-owner-label{max-width:230px;white-space:normal;font-weight:700}.owner-result h4{margin:8px 0 4px}.owner-result p{margin:6px 0}.owner-result a{display:inline-block;margin:4px 8px 4px 0}
+
+/* Search remains visible when the mobile Layers panel is closed. */
+body>#search{position:relative;z-index:1100;margin:0;height:62px;padding:9px 20px;background:var(--cream);border-bottom:1px solid var(--line)}
+body>#search #search-form{max-width:720px;margin:auto;height:43px}
+body>#search #query{font-size:16px;background:white}
+body>#search #search-form button{background:var(--ink);color:white;padding:8px 18px}
+body>#search #results{position:absolute;top:55px;left:50%;transform:translateX(-50%);width:min(720px,calc(100% - 40px));background:white;max-height:min(330px,45dvh);box-shadow:0 8px 24px #173e3633;border-radius:0 0 8px 8px}
+body>#search #results:empty{display:none}
+body>#search #results button{font-size:14px;min-height:44px}
+body>#search #results p{padding:8px 12px}
+main{height:calc(100dvh - 140px)}
+@media(max-width:760px){body>#search{padding:9px 12px}body>#search #results{width:calc(100% - 24px)}main{height:calc(100dvh - 127px)}aside{top:127px}}
